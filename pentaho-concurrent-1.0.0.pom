@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>pentaho</groupId>
+  <artifactId>pentaho-concurrent</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0.0</version>
+
+
+  <name>Pentaho Project: ${project.artifactId}</name>
+  <description>Pentaho variant of concurrent-1.3.4.jar</description>
+  <url>http://www.pentaho.com</url>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+      <comments>A business-friendly OSS license</comments>
+    </license>
+  </licenses>
+
+  <properties>
+    <pentaho.public.release.repo>https://repo.orl.eng.hitachivantara.com/artifactory/pntpub-mvn-release-orl</pentaho.public.release.repo>
+    <pentaho.public.snapshot.repo>https://repo.orl.eng.hitachivantara.com/artifactory/pntpub-mvn-snapshot-orl</pentaho.public.snapshot.repo>
+    <version.for.license>${project.version}</version.for.license>
+  </properties>
+
+  <build>
+  <plugins>
+  <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <configuration>
+      <source>1.8</source>
+      <target>1.8</target>
+    </configuration>
+  </plugin>
+  </plugins>
+  </build>
+
+  <distributionManagement>
+    <repository>
+      <id>pentaho.public.release.repo</id>
+      <name>Pentaho Public Release Repository</name>
+      <url>${pentaho.public.release.repo}</url>
+    </repository>
+    <snapshotRepository>
+      <id>pentaho.public.snapshot.repo</id>
+      <name>Pentaho Public Snapshot Repository</name>
+      <url>${pentaho.public.snapshot.repo}</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+</project>
